@@ -1,51 +1,53 @@
 body {
 	font-family: "Raleway", sans-serif;
-	background-color: #f1f1f1;
+	max-width: 1024px;
+	margin: 0 auto;
 }
 
-nav {
-	background-color: #ffeaee;
+.nav-link {
+	border-bottom: 2px solid transparent;
 }
 
-nav a {
-	color: #f1f1f1;
+.nav-link:hover {
+	border-bottom: 2px solid #f28482;
 }
 
-nav a:hover {
-	color: #f1f1f1;
+/* ---------- */
+/* scale font based on container width */
+#heading-container {
+	container-type: inline-size;
 }
 
-
-div h1 {
-	font-size: clamp(1em, 2.5vi, 50px);
+#heading-container h1 {
+	font-size: 6cqw;
 	letter-spacing: 0.2em;
 	text-wrap: nowrap;
 }
+/* ---------- */
 
-div h1 span {
-	color: #ee7799;
+#heading-container h1 span {
+	color: #f28482;
+}
+
+div h6 {
+	font-size: clamp(1.1rem, 2vw, 22px);
 }
 
 div p {
-	font-size: clamp(1em, 1.8vi, 25px);
-}
-
-div img[src="images/lolli_icon.png"] {
-	transform: rotate(45deg);
+	font-size: clamp(1rem, 1.8vw, 20px);
 }
 
 footer {
-	font-size: 0.75rem;
+	background-color: #fff3ee !important;
+	color: #f28482;
+}
+
+footer p {
+	font-size: 0.8rem !important;
 }
 
 /* rotates the lollipop icons on the webpage */
 .custom-image-transform:hover {
-	transform: rotate(405deg);
+	transform: rotate(360deg);
 	transition-duration: 1s;
-}
-
-@media (max-width: 576px) {
-	div h1 {
-		font-size: 5vw;
-	}
 }
